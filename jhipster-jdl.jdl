@@ -1,0 +1,29 @@
+entity Category {
+    id UUID,
+    name String,
+    description String
+}
+
+entity Product {
+    id UUID,
+    name String,
+    code String,
+    description String,
+    price Double,
+    brand String,
+    manufacturingDate Instant,
+    expirationDate Instant,
+    quantity Integer,
+    category Category,
+    rating Double,
+    image String,
+    tags String,
+    origin String,
+    status String
+}
+
+dto * with mapstruct
+
+service * with serviceImpl
+
+paginate * with infinite-scroll
